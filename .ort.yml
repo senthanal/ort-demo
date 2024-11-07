@@ -1,0 +1,30 @@
+excludes:
+  scopes:
+  - pattern: "devDependencies"
+    reason: "DEV_DEPENDENCY_OF"
+    comment: "Packages for development only."
+  paths:
+  - pattern: "ckeditor4/adapters/**"
+    reason: "OTHER"
+    comment: "Only ckeditor.js file from this directory is distributed. All other files are not distributed."
+  - pattern: "ckeditor4/core/**"
+    reason: "OTHER"
+    comment: "Only ckeditor.js file from this directory is distributed. All other files are not distributed."
+
+package_configurations:
+  - id: "NPM::ckeditor4:4.22.0"
+    vcs:
+      type: "Git"
+      url: "https://github.com/ckeditor/ckeditor4.git"
+      revision: "v4.22.0"
+    license_finding_curations:
+    - path: "ckeditor4/ckeditor.js"
+      reason: "INCORRECT"
+      concluded_license: "MPL-1.1"
+
+license_choices:
+  package_license_choices:
+  - package_id: "NPM::ckeditor4:4.22.0"
+    license_choices:
+    - given: (GPL-2.0 OR LGPL-2.1 OR MPL-1.1)
+      choice: MPL-1.1
