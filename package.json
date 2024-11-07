@@ -2,16 +2,13 @@
   "name": "ort-demo",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
+    "start": "node run-ort.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/senthanal/ort-demo.git"
-  },
   "dependencies": {
     "ckeditor4": "4.22.0"
   }
