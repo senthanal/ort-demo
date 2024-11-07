@@ -8,6 +8,10 @@
   },
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/senthanal/ort-demo.git"
+  },
   "dependencies": {
     "ckeditor4": "4.22.0"
   }
