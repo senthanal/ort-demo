@@ -13,12 +13,12 @@ function runORT() {
   }
   cmd("docker build -t ort-demo . --no-cache");
   cmd(`docker run -v ${process.cwd()}/results:/home/ort/results:rw ort-demo --no-cache`);
-  cleanUpDocker();
+  //cleanUpDocker();
 }
 
 function cleanUpDocker() {
-  cmd("docker stop $(docker ps -a -q --filter ancestor=ort-demo)");
-  cmd("docker rm $(docker ps -a -q --filter ancestor=ort-demo)");
+  cmd("docker stop ort-demo");
+  cmd("docker rm --force --volumes ort-demo");
   cmd("docker rmi ort-demo");
 }
 

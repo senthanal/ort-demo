@@ -1,4 +1,4 @@
-FROM ghcr.io/oss-review-toolkit/ort-minimal:38.0.0
+FROM ghcr.io/oss-review-toolkit/ort-minimal:39.0.0
 
 WORKDIR $HOME
 COPY .ort/config $HOME/.ort/config
